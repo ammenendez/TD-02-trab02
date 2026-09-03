@@ -5,37 +5,37 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.7 }
 
-\bibitem[{Brasil. Minist{\'e}rio da Sa{\'u}de} 2022]{datasussim2022}
-\abntrefinfo{{Brasil. Minist{\'e}rio da Sa{\'u}de}}{{Brasil. Minist{\'e}rio da Sa{\'u}de}}{2022a}
-{{Brasil. Minist{\'e}rio da Sa{\'u}de}. \emph{Sistema de Informa{\c{c}}{\~o}es sobre Mortalidade (SIM)}: {\'o}bitos de residentes no distrito federal por idade e sexo, 2022. Bras{\'i}lia, DF: Departamento de Inform{\'a}tica do SUS, 2022.
+\bibitem[{BRASIL. Ministério da Saúde} 2022]{datasussim2022}
+\abntrefinfo{{BRASIL. Ministério da Saúde}}{{BRASIL. Ministério da Saúde}}{2022a}
+{{BRASIL. Ministério da Saúde}. \emph{Sistema de Informa{\c{c}}{\~o}es sobre Mortalidade (SIM)}: {\'o}bitos de residentes no distrito federal por idade e sexo, 2022. Bras{\'i}lia, DF: Departamento de Inform{\'a}tica do SUS, 2022.
 Dispon{\'\i}vel em: \url{https://datasus.saude.gov.br/mortalidade-desde-1996-pela-cid-10}. Acesso em: 3 set. 2026.}
 
-\bibitem[{Brasil. Minist{\'e}rio da Sa{\'u}de} 2022]{datasussinasc2022}
-\abntrefinfo{{Brasil. Minist{\'e}rio da Sa{\'u}de}}{{Brasil. Minist{\'e}rio da Sa{\'u}de}}{2022b}
-{{Brasil. Minist{\'e}rio da Sa{\'u}de}. \emph{Sistema de Informa{\c{c}}{\~o}es sobre Nascidos Vivos (SINASC)}: nascidos vivos no distrito federal por resid{\^e}ncia da m{\~a}e, idade da m{\~a}e e sexo, 2022. Bras{\'i}lia, DF: Departamento de Inform{\'a}tica do SUS, 2022.
+\bibitem[{BRASIL. Ministério da Saúde} 2022]{datasussinasc2022}
+\abntrefinfo{{BRASIL. Ministério da Saúde}}{{BRASIL. Ministério da Saúde}}{2022b}
+{{BRASIL. Ministério da Saúde}. \emph{Sistema de Informa{\c{c}}{\~o}es sobre Nascidos Vivos (SINASC)}: nascidos vivos no distrito federal por resid{\^e}ncia da m{\~a}e, idade da m{\~a}e e sexo, 2022. Bras{\'i}lia, DF: Departamento de Inform{\'a}tica do SUS, 2022.
 Dispon{\'\i}vel em: \url{https://datasus.saude.gov.br/nascidos-vivos-desde-1994/}. Acesso em: 3 set. 2026.}
 
-\bibitem[{Grupo de Foz} 2021]{grupofoz2021}
-\abntrefinfo{{Grupo de Foz}}{{Grupo de Foz}}{2021}
-{{Grupo de Foz}. \emph{M{\'e}todos demogr{\'a}ficos: uma vis{\~a}o desde os pa{\'i}ses de l{\'i}ngua portuguesa}. 1. ed. S{\~a}o Paulo: Blucher, 2021. Dispon{\'\i}vel em: \url{https://openaccess.blucher.com.br/article-list/9786555500837-504/list}. Acesso em: 3 set. 2026.}
+\bibitem[{GRUPO DE FOZ} 2021]{grupofoz2021}
+\abntrefinfo{{GRUPO DE FOZ}}{{GRUPO DE FOZ}}{2021}
+{{GRUPO DE FOZ}. \emph{M{\'e}todos demogr{\'a}ficos}: uma vis{\~a}o desde os pa{\'i}ses de l{\'i}ngua portuguesa. 1. ed. S{\~a}o Paulo: Blucher, 2021. Dispon{\'\i}vel em: \url{https://openaccess.blucher.com.br/article-list/9786555500837-504/list}. Acesso em: 3 set. 2026.}
 
-\bibitem[{Instituto Brasileiro de Geografia e Estat{\'i}stica} 2023]{ibge2022censo}
-\abntrefinfo{{Instituto Brasileiro de Geografia e Estat{\'i}stica}}{{Instituto Brasileiro de Geografia e Estat{\'i}stica}}{2023a}
-{{Instituto Brasileiro de Geografia e Estat{\'i}stica}. \emph{Censo Demogr{\'a}fico 2022}: popula{\c{c}}{\~a}o por idade e sexo: resultados do universo. Rio de Janeiro: [s.n.], 2023.
+\bibitem[{INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA} 2023]{ibge2022censo}
+\abntrefinfo{{INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA}}{{INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA}}{2023a}
+{{INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA}. \emph{Censo Demogr{\'a}fico 2022}: popula{\c{c}}{\~a}o por idade e sexo: resultados do universo. Rio de Janeiro: {IBGE}, 2023.
 Dispon{\'\i}vel em: \url{https://www.ibge.gov.br/estatisticas/sociais/populacao/22827-censo-demografico-2022.html}. Acesso em: 3 set. 2026.}
 
-\bibitem[{Instituto Brasileiro de Geografia e Estat{\'i}stica} 2023]{ibgesidra9514}
-\abntrefinfo{{Instituto Brasileiro de Geografia e Estat{\'i}stica}}{{Instituto Brasileiro de Geografia e Estat{\'i}stica}}{2023b}
-{{Instituto Brasileiro de Geografia e Estat{\'i}stica}. \emph{Tabela 9514: popula{\c{c}}{\~a}o residente, por sexo, idade e forma de declara{\c{c}}{\~a}o da idade}: Censo demogr{\'a}fico 2022: resultados do universo. Rio de Janeiro: [s.n.], 2023.
+\bibitem[{INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA} 2023]{ibgesidra9514}
+\abntrefinfo{{INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA}}{{INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA}}{2023b}
+{{INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA}. \emph{Tabela 9514: popula{\c{c}}{\~a}o residente, por sexo, idade e forma de declara{\c{c}}{\~a}o da idade}: Censo demogr{\'a}fico 2022: resultados do universo. Rio de Janeiro: {IBGE}, 2023.
 Dispon{\'\i}vel em: \url{https://sidra.ibge.gov.br/tabela/9514}. Acesso em: 3 set. 2026.}
 
 \bibitem[Preston, Heuveline e Guillot 2001]{preston2001}
 \abntrefinfo{Preston, Heuveline e Guillot}{PRESTON; HEUVELINE; GUILLOT}{2001}
-{PRESTON, S.~H.; HEUVELINE, P.; GUILLOT, M. \emph{Demography: measuring and modeling population processes}. Oxford: Blackwell Publishers, 2001.}
+{PRESTON, S.~H.; HEUVELINE, P.; GUILLOT, M. \emph{Demography}: measuring and modeling population processes. Oxford: Blackwell Publishers, 2001.}
 
-\bibitem[{R Core Team} 2025]{rproject}
-\abntrefinfo{{R Core Team}}{{R Core Team}}{2025}
-{{R Core Team}. \emph{R: a language and environment for statistical computing}.
-Vienna, 2025. Dispon{\'\i}vel em: \url{https://www.R-project.org/}. Acesso em: 3 set. 2026.}
+\bibitem[{R CORE TEAM} 2025]{rproject}
+\abntrefinfo{{R CORE TEAM}}{{R CORE TEAM}}{2025}
+{{R CORE TEAM}. \emph{R}: a language and environment for statistical computing.
+Vienna: R Foundation for Statistical Computing, 2025. Dispon{\'\i}vel em: \url{https://www.R-project.org/}. Acesso em: 3 set. 2026.}
 
 \end{thebibliography}

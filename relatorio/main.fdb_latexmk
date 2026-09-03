@@ -1,20 +1,21 @@
 # Fdb version 4
-["bibtex main"] 1788459376.62867 "main.aux" "main.bbl" "main" 1788459458.67937 0
-  "./references.bib" 1788459346.55541 2805 f3c62d3d631408f6aeace93f9d639af6 ""
+["bibtex main"] 1788461812.47342 "main.aux" "main.bbl" "main" 1788461815.41528 0
+  "./references.bib" 1788460455.79456 2856 92dad64056106856096a081f5f44b65d ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bib/abntex2/abntex2-options.bib" 1357081713 5396 4eb260dac60f150ae608d45252853090 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/abntex2/abntex2-alf.bst" 1543183680 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "main.aux" 1788459458.35623 8108 b4d8d2a3d2f46378ec6c81e99fb12386 "pdflatex"
+  "main.aux" 1788461815.07147 8294 fbfd233228a7ba7597ec0125a75dbf70 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1788459455.80533 "main.tex" "main.pdf" "main" 1788459458.67954 0
+["pdflatex"] 1788461812.57788 "/Users/andres/Library/CloudStorage/OneDrive-Pessoal/Dinter/Semestres/segundo semestre/Tecnicas Demograficas/Cristiane/trabalho01/df/relatorio/main.tex" "main.pdf" "main" 1788461815.41542 0
   "../figuras/comparacao_estruturas_etarias_df_2022.png" 1788445838.63455 238247 1c18d35a0341c41a59cb89210586ebff ""
   "../figuras/grafico_item1_tef_df_2022.png" 1788442580.81654 222231 e0d8b9601beca50b9f452cc7c67155f8 ""
   "../figuras/momentum_populacional_df_2022.png" 1788445970.38125 133552 f7493479cd3fbb69b575c6341feb0cd1 ""
   "../figuras/piramide_estrutura_estavel_leslie_df_2022.png" 1788445324.54998 118224 0f9184930715e00334c6bdd7d3cee1de ""
   "../figuras/piramide_estrutura_estavel_lotka_df_2022.png" 1788444038.44285 120143 7e88d339bb28bfe74f56ac558728e60c ""
   "../figuras/piramide_estrutura_observada_df_2022.png" 1788445655.95441 116889 4cff0e0a0e2d33dcff768522857665a5 ""
+  "/Users/andres/Library/CloudStorage/OneDrive-Pessoal/Dinter/Semestres/segundo semestre/Tecnicas Demograficas/Cristiane/trabalho01/df/relatorio/main.tex" 1788461809.28397 38471 fd96762b5151cb07f69095c46c52a5ac ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -236,11 +237,7 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/kvoptions/kvoptions.sty" 1655478651 22555 6d8e155cfef6d82c3d5c742fea7c992e ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty" 1665067230 13815 760b0c02f691ea230f5359c4e1de23a7 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1716410060 29785 9f93ab201fe5dd053afcc6c1bcf7d266 ""
-  "/usr/local/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty" 1738271527 6565 f51d809db6193fae7b06c1bc26ca8f75 ""
-  "/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty" 1724879202 4674 22943918cc84173478a588d6efbc800b ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1279039959 678 4792914a8f45be57bb98413425e4c7af ""
-  "/usr/local/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex" 1632168149 95525 6fd0552101a6b1f9b7a84b402ec435ba ""
-  "/usr/local/texlive/2025/texmf-dist/tex/latex/lipsum/lipsum.sty" 1632168149 14690 c2c754218a7108db7823a4839c1bc3cd ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.cfg" 1727126400 1865 301ae3c26fb8c0243307b619a6aa2dd3 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/listings/listings.sty" 1727126400 81640 997090b6c021dc4af9ee00a97b85c5b4 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/listings/lstmisc.sty" 1727126400 77051 be68720e5402397a830abb9eed5a2cb4 ""
@@ -302,13 +299,15 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "figuras/logo_ppgdem.png" 1775415734.11405 30848 c6f932075c1186901e588da75b51cf32 ""
   "figuras/logo_ufs.png" 1775415697.25135 13524 0d825553f86086d14df9272a06c93015 ""
-  "main.aux" 1788459458.35623 8108 b4d8d2a3d2f46378ec6c81e99fb12386 "pdflatex"
-  "main.bbl" 1788459376.7281 3303 4b380b73398eea74fda6bff6251d6852 "bibtex main"
-  "main.out" 1788459458.35742 3400 6133584092e5e7d5ee0052ee45190959 "pdflatex"
-  "main.tex" 1788459450.90634 37350 d5559f91e0318eb22f39e144550d841b ""
+  "main.aux" 1788461815.07147 8294 fbfd233228a7ba7597ec0125a75dbf70 "pdflatex"
+  "main.bbl" 1788461812.57408 3271 42e6c3b4684a1b6874e6ec407b57b02a "bibtex main"
+  "main.out" 1788461815.0727 3504 0a54e050ce174b3783c45f99b670e337 "pdflatex"
+  "main.tex" 1788461809.28397 38471 fd96762b5151cb07f69095c46c52a5ac ""
+  "main.toc" 1788461815.07289 1566 de8e093d6a49674edb837d7bcfd5c0a1 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
   "main.out"
   "main.pdf"
+  "main.toc"
   (rewritten before read)

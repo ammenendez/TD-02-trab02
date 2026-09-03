@@ -9,7 +9,6 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english,brazil]{babel}
-\usepackage{mathptmx}
 % -------------------------------------------------
 % Pacotes matemáticos e fontes
 % -------------------------------------------------
@@ -29,8 +28,8 @@
 % -------------------------------------------------
 % Gráficos, tabelas e quadros
 % -------------------------------------------------
+\usepackage[table,xcdraw]{xcolor}
 \usepackage{graphicx}
-\usepackage{graphics}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepackage{float}
@@ -41,14 +40,12 @@
 \usepackage{multirow}
 \usepackage{makecell}
 \usepackage{threeparttable}
-\usepackage[table,xcdraw]{xcolor}
 \usepackage[format=hang]{caption}
 \captionsetup[quadro]{justification=centering}
 % -------------------------------------------------
 % Quadros (ambiente próprio)
 % -------------------------------------------------
 \usepackage{tocloft}
-\usepackage{caption}
 \floatstyle{plaintop}
 \newfloat{quadro}{htbp}{loq}
 \floatname{quadro}{Quadro}
@@ -60,11 +57,9 @@
 % -------------------------------------------------
 \usepackage{enumerate}
 \usepackage{nomencl}
-\usepackage{color}
 \usepackage{verbatim}
 \usepackage{hyperref}
 \usepackage[alf]{abntex2cite}
-\usepackage{colortbl}
 \usepackage{tcolorbox}
 \usepackage{fancyhdr}
 \usepackage{appendix}
@@ -97,21 +92,6 @@
     captionpos=b,
     keywordstyle=\color{blue},
     commentstyle=\color{green!50!black},
-    stringstyle=\color{red!70!black}
-}
-\lstset{
-    basicstyle=\ttfamily\small,
-    numbers=left,
-    numberstyle=\tiny,
-    stepnumber=1,
-    numbersep=8pt,
-    frame=single,
-    breaklines=true,
-    tabsize=4,
-    showstringspaces=false,
-    captionpos=b,
-    keywordstyle=\color{blue},
-    commentstyle=\color{green!50!black},
     stringstyle=\color{red!70!black},
     literate=
       {á}{{\\'a}}1 {à}{{\\\`a}}1 {ã}{{\\\~a}}1 {â}{{\\^a}}1
@@ -127,7 +107,12 @@
       {Ú}{{\\'U}}1
       {Ç}{{\c{C}}}1
 }
-\usepackage{lipsum}
+
+\hypersetup{
+    hidelinks,
+    pdfborder={0 0 0}
+}
+
 % -------------------------------------------------
 % Documento
 % -------------------------------------------------
@@ -171,8 +156,16 @@
         {\small Setembro de 2026\par}
     \end{center}
 \end{titlepage}
-    \clearpage
-\newpage
+\clearpage
+
+% -------------------------------------------------
+% Sumário
+% -------------------------------------------------
+\renewcommand{\contentsname}{\centering SUMÁRIO}
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
 \pagenumbering{arabic}
 
 
@@ -189,8 +182,8 @@ imediatamente o nível de reposição, enquanto a mortalidade permanece constant
 Esse procedimento permite mensurar quanto a população ainda aumentaria antes de atingir uma 
 configuração estacionária, exclusivamente em razão da estrutura etária existente no início da 
 projeção \cite{grupofoz2021,preston2001}. Todos os cálculos foram implementados no ambiente R, 
-utilizando dados de população, nascimentos e óbitos referentes ao Distrito Federal. Todos os 
-códigos utilizados, bem como os dados utilizados e os resultados, estão disponíveis no repositório 
+utilizando dados de população, nascimentos e óbitos referentes ao Distrito Federal. O código, os 
+dados processados e os resultados estão disponíveis no repositório 
 do GitHub: \url{https://github.com/ammenendez/TD-02-trab02.git}.
 
 
@@ -219,9 +212,9 @@ A Taxa Específica de Fecundidade (TEF) mede a frequência de nascimentos entre 
 {}_nf_x = \frac{{}_nN_x}{{}_nP_x^F},
 \end{equation}
 
-\noindent em que \({}_nN_x\) representa o número de nascidos vivos de mães pertencentes ao grupo etário de \(x\) a \(x+n\), e \({}_nP_x^F\) corresponde à população feminina média do mesmo grupo. Foram estimadas duas séries: a TEF total, que considera nascimentos de ambos os sexos, e a TEF feminina, \({}_nf_x^F\), que considera somente o nascimento de filhas e é utilizada no cálculo das taxas de reprodução.
+\noindent em que \({}_nN_x\) representa o número de nascidos vivos de mães pertencentes ao grupo etário de \(x\) a \(x+n\), e \({}_nP_x^F\) corresponde à população feminina média do mesmo grupo. Operacionalmente, a população recenseada em 2022 foi utilizada como aproximação dessa população média. Foram estimadas duas séries: a TEF total, que considera nascimentos de ambos os sexos, e a TEF feminina, \({}_nf_x^F\), que considera somente o nascimento de filhas e é utilizada no cálculo das taxas de reprodução.
 
-As maiores TEFs totais foram observadas nos grupos de 25 a 29 anos e de 30 a 34 anos, com, respectivamente, 73,89 e 73,58 nascimentos por mil mulheres. A taxa foi de 63,62 por mil entre 20 e 24 anos e diminuiu para 52,27 por mil entre 35 e 39 anos. Nos extremos do período reprodutivo, foram estimados 26,83 nascimentos por mil mulheres entre 15 e 19 anos e 1,40 por mil entre 45 e 49 anos.
+As maiores TEFs totais foram observadas nos grupos de 25 a 29 anos e de 30 a 34 anos, com, respectivamente, 73,89 e 73,58 nascimentos por mil mulheres. A taxa foi de 63,62 por mil entre 20 e 24 anos e diminuiu para 52,27 por mil entre 35 e 39 anos. Nos extremos do período reprodutivo, foram estimados 26,83 nascimentos por mil mulheres entre 15 e 19 anos e 1,40 por mil entre 45 e 49 anos. As séries total e feminina são apresentadas na Figura~\ref{fig:tef_df_2022}.
 
 \begin{figure}[H]
 \centering
@@ -232,11 +225,11 @@ As maiores TEFs totais foram observadas nos grupos de 25 a 29 anos e de 30 a 34 
 \fonte{Elaboração própria com dados do SINASC e do Censo Demográfico de 2022.}
 \end{figure}
 
-A distribuição apresentada na Figura~\ref{fig:tef_df_2022} indica concentração da fecundidade entre 20 e 39 anos, com máximo entre 25 e 29 anos e nível praticamente equivalente entre 30 e 34 anos. A proximidade entre esses dois grupos mostra que os nascimentos estavam distribuídos em um intervalo relativamente amplo das idades adultas. A curva referente às filhas mantém o mesmo formato da fecundidade total e apresenta níveis próximos da metade, conforme esperado pela distribuição dos nascimentos segundo o sexo.
+O formato das curvas da Figura~\ref{fig:tef_df_2022} indica concentração da fecundidade entre 20 e 39 anos, com máximo entre 25 e 29 anos e nível praticamente equivalente entre 30 e 34 anos. A proximidade entre esses dois grupos mostra que os nascimentos estavam distribuídos em um intervalo relativamente amplo das idades adultas. A curva referente às filhas mantém o mesmo formato da fecundidade total e apresenta níveis próximos da metade, conforme esperado pela distribuição dos nascimentos segundo o sexo.
 
 \subsection{Idade média à maternidade}
 
-A idade média à maternidade sintetiza a distribuição da fecundidade por idade e indica a idade média em que ocorreriam os nascimentos caso as taxas específicas observadas fossem mantidas. O indicador é calculado como uma média ponderada das idades centrais dos grupos etários, utilizando como pesos as respectivas contribuições para a fecundidade total \cite{grupofoz2021}:
+A idade média à maternidade sintetiza a distribuição da fecundidade por idade e indica a idade média das mulheres ao nascimento dos filhos caso as taxas específicas observadas fossem mantidas. O indicador é calculado como uma média ponderada das idades centrais dos grupos etários, utilizando como pesos as respectivas contribuições para a fecundidade total \cite{grupofoz2021}:
 
 \begin{equation}
 \bar{m} =
@@ -267,6 +260,8 @@ TLR =
 \end{equation}
 
 \noindent em que \({}_nL_x^F\) representa os anos-pessoa vividos pelas mulheres no intervalo e \(\ell_0^F\) é a raiz da tábua de vida feminina. Como \({}_nL_x^F\) já incorpora a amplitude do intervalo, não se acrescenta outro fator \(n\) à soma.
+
+Os valores estimados para os dois indicadores são apresentados na Tabela~\ref{tab:tbr_tlr}.
 
 \begin{table}[H]
     \centering
@@ -309,7 +304,7 @@ T_0=\frac{\displaystyle\sum_{x=\alpha}^{\beta}
 \left(x+\frac{n}{2}\right){}_nf_x^F
 \dfrac{{}_nL_x^F}{\ell_0^F}}{TLR}.
 \end{equation}
-Para o Distrito Federal, obteve-se \(T_0=29,33\) anos. Com \(TLR=0,7336\), a aproximação resultou em \(r_0=-0,0105622\) ao ano. Os valores \(-1,0562\%\) e \(-10,5622\) por mil apresentados adiante correspondem, respectivamente, a \(100r_0\) e \(1.000r_0\).
+Para o Distrito Federal, obteve-se \(T_0=29{,}33\) anos. Com \(TLR=0{,}7336\), a aproximação resultou em \(r_0=-0{,}0105622\) ao ano. Os valores \(-1{,}0562\%\) e \(-10{,}5622\) por mil apresentados adiante correspondem, respectivamente, a \(100r_0\) e \(1000r_0\).
 
 \subsection{Equação de Euler--Lotka}
 
@@ -324,16 +319,18 @@ e^{-r\left(x+n/2\right)}
 
 \noindent em que \(x+n/2\) é a idade central do grupo e os demais termos correspondem à contribuição líquida da fecundidade feminina. A raiz da equação foi determinada numericamente no R.
 
+Os resultados obtidos pelos dois procedimentos são apresentados na Tabela~\ref{tab:r_intrinseco}.
+
 \begin{table}[H]
 \centering
 \caption{Taxa intrínseca de crescimento segundo o método de estimação}
 \label{tab:r_intrinseco}
 \begin{tabular}{lrr}
 \toprule
-Método & $100r$ (\% ao ano) & $1.000r$ (por mil ao ano) \\  
+Método & $100r$ (\% ao ano) & $1000r$ (por mil ao ano) \\  
 \midrule
-Aproximação pela TLR & $-1,0562$ & $-10,5622$ \\
-Equação de Lotka     & $-1,0474$ & $-10,4741$ \\
+Aproximação pela TLR & $-1{,}0562$ & $-10{,}5622$ \\
+Equação de Euler--Lotka & $-1{,}0474$ & $-10{,}4741$ \\
 \bottomrule
 \end{tabular}
 
@@ -345,9 +342,9 @@ Equação de Lotka     & $-1,0474$ & $-10,4741$ \\
 \end{table}
 
 Os dois procedimentos produziram resultados muito próximos, com diferença de apenas 0,0881 por 
-mil ao ano na escala \(1.000r\). A solução da equação de Euler--Lotka, \(r=-0,0104741\), foi adotada nos cálculos 
+mil ao ano na escala \(1000r\). A solução da equação de Euler--Lotka, \(r=-0{,}0104741\), foi adotada nos cálculos 
 subsequentes. O sinal negativo indica que as condições de fecundidade e mortalidade de 2022 
-implicariam redução anual de aproximadamente 1,05\% em uma população estável e fechada. 
+implicariam decréscimo anual efetivo de aproximadamente 1,04\% em uma população estável e fechada. 
 Esse resultado não corresponde necessariamente à variação populacional efetivamente observada 
 no Distrito Federal, pois esta também é influenciada pela migração e pela estrutura etária 
 existente.
@@ -359,7 +356,7 @@ Uma população estável é produzida pela manutenção de funções de fecundid
 
 \subsection{Taxa bruta de natalidade}
 
-A taxa bruta de natalidade da população estável expressa o número anual de nascimentos por unidade de população na estrutura etária correspondente ao valor intrínseco de \(r\). Para incluir ambos os sexos, foram consideradas as proporções masculina e feminina observadas entre os nascimentos e as funções de sobrevivência das respectivas tábuas de vida. O cálculo foi realizado por:
+A taxa bruta de natalidade da população estável expressa o número anual de nascimentos por unidade de população na estrutura etária correspondente ao valor intrínseco de \(r\). Para incluir ambos os sexos, foram consideradas as proporções masculina e feminina observadas entre os nascimentos e as funções de sobrevivência das respectivas tábuas de vida. O cálculo foi realizado por \cite{grupofoz2021,preston2001}:
 
 \begin{equation}
 TBN =
@@ -373,7 +370,7 @@ e^{-r a_x}
 
 \noindent em que \(p_s\) representa a proporção de nascimentos do sexo \(s\), \(a_x=x+n/2\) é a idade representativa dos intervalos fechados, \({}_nL_x^s\) corresponde aos anos-pessoa vividos e \(\ell_0^s\) é a raiz da respectiva tábua de vida. Para o intervalo aberto de 80 anos ou mais, adotou-se \(a_{80}=80+e_{80}^s\).
 
-A taxa estimada foi \(TBN=0,00779804\) ao ano, equivalente a \textbf{7,798 nascimentos por mil habitantes}. O valor é inferior à taxa intrínseca de mortalidade implícita, pois a relação \(r=TBN-TBM\), combinada ao valor negativo de \(r\), exige que os óbitos superem os nascimentos na população estável. Portanto, mantidas as condições demográficas de 2022 e desconsiderada a migração, a estrutura estável equivalente seria compatível com redução populacional.
+A taxa estimada foi \(TBN=0{,}00779804\) ao ano, equivalente a \textbf{7,798 nascimentos por mil habitantes}. O valor é inferior à taxa intrínseca de mortalidade implícita, pois a relação \(r=TBN-TBM\), combinada ao valor negativo de \(r\), exige que os óbitos superem os nascimentos na população estável. Portanto, mantidas as condições demográficas de 2022 e desconsiderada a migração, a estrutura estável equivalente seria compatível com redução populacional.
 
 \subsection{Estrutura etária pelo método de Lotka}
 
@@ -389,7 +386,7 @@ p_s e^{-r a_x}
 \noindent em que \(p_s\) é a proporção de nascimentos do sexo \(s\), \(r\) é a taxa intrínseca 
 obtida pela equação de Euler--Lotka e \(a_x\) corresponde à idade representativa do intervalo. 
 Os pesos masculinos e femininos foram normalizados conjuntamente, de modo que a soma da 
-estrutura resultasse em 100\% \cite{grupofoz2021,preston2001}.
+estrutura resultasse em 100\% \cite{grupofoz2021,preston2001}. A distribuição resultante é apresentada na Figura~\ref{fig:estrutura_lotka}.
 
 \begin{figure}[H]
 \centering
@@ -436,7 +433,7 @@ A estrutura obtida apresenta base relativamente estreita e elevada concentraçã
 mais avançadas. Esse formato decorre da combinação entre fecundidade inferior ao nível de 
 reposição e maior sobrevivência até idades elevadas. Assim, se as condições demográficas de 
 2022 permanecessem constantes e não houvesse migração, a população convergiria para uma 
-estrutura consideravelmente mais envelhecida que a observada no Censo de 2022.
+estrutura consideravelmente mais envelhecida que a observada no Censo de 2022. Essa estrutura é apresentada na Figura~\ref{fig:estrutura_leslie}.
 
 \begin{figure}[H]
 \centering
@@ -450,7 +447,7 @@ estrutura consideravelmente mais envelhecida que a observada no Censo de 2022.
 
 \section{Comparação com a estrutura etária observada}
 
-A estrutura etária observada foi calculada a partir da população recenseada do Distrito Federal em 2022, agrupada em intervalos quinquenais de idade e por sexo. Diferentemente das estruturas de Lotka e Leslie, a distribuição observada incorpora os efeitos acumulados das variações históricas da fecundidade, da mortalidade e, especialmente, da migração.
+A estrutura etária observada foi calculada a partir da população recenseada do Distrito Federal em 2022, agrupada em intervalos quinquenais de idade e por sexo. Diferentemente das estruturas de Lotka e Leslie, a distribuição observada incorpora os efeitos acumulados das variações históricas da fecundidade, da mortalidade e da migração. Sua composição por idade e sexo é apresentada na Figura~\ref{fig:estrutura_observada}.
 
 \begin{figure}[H]
 \centering
@@ -462,11 +459,13 @@ A estrutura etária observada foi calculada a partir da população recenseada d
 \fonte{Elaboração própria com dados do Censo Demográfico de 2022.}
 \end{figure}
 
-A estrutura observada apresenta maior concentração nas idades adultas, principalmente entre 20 e 49 anos, e participação relativamente reduzida nas idades mais avançadas. Esse formato reflete tanto a redução recente da fecundidade quanto a atração migratória exercida pelo Distrito Federal sobre indivíduos em idade economicamente ativa.
+A estrutura observada apresenta maior concentração nas idades adultas, principalmente entre 20 e 49 anos, e participação relativamente reduzida nas idades mais avançadas. Esse formato é compatível com a redução recente da fecundidade e com o histórico de atração migratória do Distrito Federal sobre indivíduos em idade economicamente ativa; contudo, a decomposição desses efeitos não integra o escopo deste trabalho.
+
+A comparação por grandes grupos etários é sintetizada na Tabela~\ref{tab:comparacao_grupos}.
 
 \begin{table}[H]
 \centering
-\caption{Distribuição da população por grandes grupos etários, segundo a estrutura considerada}
+\caption{Distribuição da população por grandes grupos etários, segundo a estrutura considerada, Distrito Federal, 2022}
 \label{tab:comparacao_grupos}
 \begin{tabular}{lccc}
 \toprule
@@ -486,11 +485,13 @@ Leslie    & 12,40\% & 54,46\% & 33,14\% \\
 
 \end{table}
 
+A comparação detalhada por grupos quinquenais é apresentada na Figura~\ref{fig:comparacao_estruturas}.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.94\textwidth]
 {../figuras/comparacao_estruturas_etarias_df_2022.png}
-\caption{Comparação entre a estrutura etária observada e as estruturas estáveis estimadas}
+\caption{Comparação entre a estrutura etária observada e as estruturas estáveis estimadas, Distrito Federal, 2022}
 \label{fig:comparacao_estruturas}
 \vspace{0.2cm}
 \fonte{Elaboração própria com dados do Censo Demográfico, SINASC e SIM de 2022.}
@@ -517,6 +518,8 @@ M = \frac{N_{\infty}}{N_{2022}},
 
 \noindent em que $N_{2022}$ representa a população inicial e $N_{\infty}$ corresponde ao tamanho populacional após a estabilização.
 
+Os indicadores da trajetória simulada são apresentados na Tabela~\ref{tab:momentum}.
+
 \begin{table}[H]
 \centering
 \caption{Indicadores do momentum populacional, Distrito Federal, 2022}
@@ -541,6 +544,8 @@ Ano aproximado de estabilização & 2532 \\
 
 
 \end{table}
+
+A trajetória relativa ao tamanho populacional de 2022 é apresentada na Figura~\ref{fig:momentum}.
 
 \begin{figure}[H]
 \centering
@@ -577,22 +582,23 @@ indicando que, sob as condições observadas, uma geração de mulheres não ser
 substituída pela geração seguinte.
 
 A taxa intrínseca de crescimento foi negativa nos dois procedimentos empregados. A aproximação 
-baseada na TLR resultou em $100r=-1,0562\%$ ao ano, enquanto a solução da equação de Euler--Lotka 
-produziu $-1,0474\%$ ao ano. A proximidade entre as estimativas indica que a aproximação pela 
-duração média da geração, estimada em 29,33 anos, representou adequadamente o regime reprodutivo 
+baseada na TLR resultou em $100r=-1{,}0562\%$ ao ano, enquanto a solução da equação de Euler--Lotka 
+produziu $100r=-1{,}0474\%$ ao ano. A proximidade entre as estimativas indica que a aproximação pela 
+idade média da função líquida de maternidade, estimada em 29,33 anos, representou adequadamente o regime reprodutivo 
 analisado. A taxa bruta de natalidade da população estável foi estimada em 7,80 nascimentos por 
 mil habitantes.
 
 As estruturas estáveis obtidas pelas formulações de Euler--Lotka e matricial foram semelhantes e consideravelmente mais envelhecidas que a estrutura observada. Enquanto a população com 65 anos ou mais representava 8,82\% da população recenseada, sua participação alcançou 31,30\% na estrutura de Lotka e 33,14\% na estrutura matricial. Esses resultados mostram que a composição etária observada em 2022 ainda não refletia integralmente os efeitos de longo prazo da fecundidade abaixo do nível de reposição.
 
-A simulação de reposição imediata produziu um índice de momentum igual a 1,2164. Com o autovalor dominante ajustado para um, a população aumentaria de 2,817 milhões de habitantes para um máximo de 3,476 milhões em 2067 e convergiria posteriormente para aproximadamente 3,427 milhões. Portanto, a estrutura etária inicial permitiria um crescimento residual de 21,64\% até a estabilização.
+A simulação de reposição imediata produziu um índice de momentum igual a 1,2164. Com o autovalor dominante ajustado para um, a população aumentaria de 2,817 milhões de habitantes para um máximo de 3,476 milhões em 2067 e convergiria posteriormente para aproximadamente 3,427 milhões. Portanto, o ganho líquido até a estabilização seria de 21,64\%, embora o crescimento máximo durante a transição alcançasse 23,39\%.
 
 Os resultados são condicionais às hipóteses dos modelos: manutenção das taxas de fecundidade e mortalidade, ausência de migração e regularidade dos padrões por idade. Essas condições são especialmente restritivas para o Distrito Federal, cuja estrutura populacional é influenciada por movimentos migratórios. Assim, as estimativas não devem ser interpretadas como previsões, mas como medidas sintéticas das implicações de longo prazo do regime demográfico de 2022. Em conjunto, os indicadores apontam para uma dinâmica de baixa reprodução, crescimento intrínseco negativo e acentuado envelhecimento potencial da população.
 
-
+\renewcommand{\refname}{\centering REFERÊNCIAS}
 
 {\singlespacing
 \clearpage
 \bibliography{references}
+\addcontentsline{toc}{section}{REFERÊNCIAS}
 }
 \end{document}
