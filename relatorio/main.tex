@@ -1,0 +1,216 @@
+\documentclass[a4paper,12pt]{article}
+% -------------------------------------------------
+% Configuração de página
+% -------------------------------------------------
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+% -------------------------------------------------
+% Codificação e idioma
+% -------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,brazil]{babel}
+\usepackage{mathptmx}
+% -------------------------------------------------
+% Pacotes matemáticos e fontes
+% -------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{mathptmx}
+% -------------------------------------------------
+% Formatação geral
+% -------------------------------------------------
+\usepackage{indentfirst}
+\usepackage{microtype}
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+% -------------------------------------------------
+% Gráficos, tabelas e quadros
+% -------------------------------------------------
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{threeparttable}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[format=hang]{caption}
+\captionsetup[quadro]{justification=centering}
+% -------------------------------------------------
+% Quadros (ambiente próprio)
+% -------------------------------------------------
+\usepackage{tocloft}
+\usepackage{caption}
+\floatstyle{plaintop}
+\newfloat{quadro}{htbp}{loq}
+\floatname{quadro}{Quadro}
+\newcommand{\listofquadros}{
+    \listof{quadro}{Lista de Quadros}
+}
+% -------------------------------------------------
+% Outros pacotes
+% -------------------------------------------------
+\usepackage{enumerate}
+\usepackage{nomencl}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage[alf]{abntex2cite}
+\usepackage{colortbl}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{appendix}
+\usepackage{multicol}
+\usepackage{adjustbox}
+\usepackage{wasysym}
+\usepackage{pdflscape}
+\newcommand{\fonte}[1]{\par\noindent\footnotesize Fonte: #1}
+\newcommand{\nota}[1]{\par\noindent\footnotesize Nota: #1}
+\newcommand{\celula}[1]{\makecell[l]{#1}}
+% -------------------------------------------------
+% Listagem de código-fonte
+% -------------------------------------------------
+\usepackage{listings}
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\lstlistlistingname}{Lista de Códigos}
+% -------------------------------------------------
+% Acentuação em listagens
+% -------------------------------------------------
+\lstset{
+    basicstyle=\ttfamily\small,
+    numbers=left,
+    numberstyle=\tiny,
+    stepnumber=1,
+    numbersep=8pt,
+    frame=single,
+    breaklines=true,
+    tabsize=4,
+    showstringspaces=false,
+    captionpos=b,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!50!black},
+    stringstyle=\color{red!70!black}
+}
+\lstset{
+    basicstyle=\ttfamily\small,
+    numbers=left,
+    numberstyle=\tiny,
+    stepnumber=1,
+    numbersep=8pt,
+    frame=single,
+    breaklines=true,
+    tabsize=4,
+    showstringspaces=false,
+    captionpos=b,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!50!black},
+    stringstyle=\color{red!70!black},
+    literate=
+      {á}{{\\'a}}1 {à}{{\\\`a}}1 {ã}{{\\\~a}}1 {â}{{\\^a}}1
+      {é}{{\\'e}}1 {ê}{{\\^e}}1
+      {í}{{\\'i}}1
+      {ó}{{\\'o}}1 {õ}{{\\\~o}}1 {ô}{{\\^o}}1
+      {ú}{{\\'u}}1
+      {ç}{{\c{c}}}1
+      {Á}{{\\'A}}1 {À}{{\\\`A}}1 {Ã}{{\\\~A}}1 {Â}{{\\^A}}1
+      {É}{{\\'E}}1 {Ê}{{\\^E}}1
+      {Í}{{\\'I}}1
+      {Ó}{{\\'O}}1 {Õ}{{\\\~O}}1 {Ô}{{\\^O}}1
+      {Ú}{{\\'U}}1
+      {Ç}{{\c{C}}}1
+}
+\usepackage{lipsum}
+% -------------------------------------------------
+% Documento
+% -------------------------------------------------
+\begin{document}
+% -------------------------------------------------
+% Folha de rosto
+% -------------------------------------------------
+\begin{titlepage}
+    \thispagestyle{empty}
+    \begin{center}
+        % Logos
+        \begin{minipage}{0.22\textwidth}
+            \centering
+            \includegraphics[width=0.9\linewidth]{figuras/logo\_ufs.png}
+        \end{minipage}
+        \hspace{1.5cm}
+        \begin{minipage}{0.22\textwidth}
+            \centering
+            \includegraphics[width=0.9\linewidth]{figuras/logo\_ppgdem.png}
+        \end{minipage}
+        \par
+        \vspace{1.2cm}
+        % Instituições
+        {\large UNIVERSIDADE FEDERAL DE SERGIPE\par}
+        {\large UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE\par}
+        \vspace{0.5cm}
+        {\large PROGRAMA DE PÓS-GRADUAÇÃO EM DEMOGRAFIA\par}
+        {\large DOUTORADO INTERINSTITUCIONAL EM POPULAÇÃO,\par}
+        {\large ESTATÍSTICAS SOCIAIS E POLÍTICAS PÚBLICAS\par}
+        \vspace{3cm}
+        % Nome do aluno
+        {\large \textbf{Andrés Ignácio Martínez Menéndez}\par}
+        \vspace{3cm}
+        % Título
+        {\Large \textbf{Técnicas Demográficas II}\par}
+        \vspace{0.6cm}
+        {\large Trabalho de Migração\par}
+        \vfill
+        % Local e data
+        {\small Aracaju (SE)\par}
+        {\small Setembro de 2026\par}
+    \end{center}
+\end{titlepage}
+    \clearpage
+\newpage
+\pagenumbering{arabic}
+
+
+\section{Introdução}
+
+A dinâmica de uma população resulta da interação entre fecundidade, mortalidade e migração. Quando as funções de fecundidade e mortalidade por idade permanecem constantes e se admite uma população fechada à migração, a distribuição etária converge, no longo prazo, para uma estrutura estável. Nessa condição, a população passa a apresentar composição etária invariável e crescimento a uma taxa constante, denominada taxa intrínseca de crescimento. O modelo de população estável permite, portanto, relacionar quantitativamente os padrões vigentes de reprodução e sobrevivência com suas consequências sobre o crescimento e a estrutura etária \cite{grupofoz2021,preston2001}.
+
+A análise dessas relações requer a combinação de indicadores sintéticos e modelos estruturados por idade. As taxas específicas de fecundidade descrevem a intensidade da reprodução em cada grupo etário feminino e constituem a base para o cálculo da idade média à maternidade e das taxas bruta e líquida de reprodução. A Taxa Bruta de Reprodução (TBR) mede o número médio de filhas que uma mulher teria ao longo do período reprodutivo caso estivesse submetida às taxas de fecundidade observadas, sem considerar a mortalidade. A Taxa Líquida de Reprodução (TLR), por sua vez, incorpora a sobrevivência feminina até as idades reprodutivas. A partir dessas medidas, pode-se estimar a taxa intrínseca de crescimento por aproximação e, de forma mais rigorosa, mediante a solução numérica da equação de Lotka \cite{grupofoz2021,preston2001}.
+
+Este trabalho tem como objetivo estimar indicadores de reprodução e analisar a população estável intrínseca correspondente às condições demográficas do Distrito Federal em 2022. São estimadas a idade média à maternidade, a TBR, a TLR, a taxa intrínseca de crescimento e a taxa bruta de natalidade da população estável. A estrutura etária estável é obtida por duas abordagens: a formulação contínua associada ao modelo de Lotka e a formulação matricial discreta baseada na matriz de Leslie \cite{leslie1945}. As estruturas resultantes são comparadas com a distribuição etária observada no Censo Demográfico de 2022.
+
+Por fim, estima-se o momentum populacional em um cenário hipotético no qual a fecundidade alcança imediatamente o nível de reposição, enquanto a mortalidade permanece constante e não há migração. Esse procedimento permite mensurar quanto a população ainda aumentaria antes de atingir uma configuração estacionária, exclusivamente em razão da estrutura etária existente no início da projeção \cite{keyfitz1971,preston2001}. Todos os cálculos foram implementados no ambiente R, utilizando dados de população, nascimentos e óbitos referentes ao Distrito Federal.
+
+
+\section{Dados e procedimentos gerais}
+
+\section{Fecundidade e reprodução}
+\subsection{Taxas específicas de fecundidade}
+\subsection{Idade média à maternidade}
+\subsection{Taxas bruta e líquida de reprodução}
+
+\section{Taxa intrínseca de crescimento}
+\subsection{Aproximação pela taxa líquida de reprodução}
+\subsection{Equação de Lotka}
+
+\section{População estável intrínseca}
+\subsection{Taxa bruta de natalidade}
+\subsection{Estrutura etária pelo método de Lotka}
+\subsection{Estrutura etária pelo método matricial de Leslie}
+
+\section{Comparação com a estrutura etária observada}
+
+\section{Momentum populacional}
+
+\section{Considerações finais}
+
+
+{\singlespacing
+\bibliography{references}
+}
+\end{document}

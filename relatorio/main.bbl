@@ -1,0 +1,26 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[{Grupo de Foz} 2021]{grupofoz2021}
+\abntrefinfo{{Grupo de Foz}}{{Grupo de Foz}}{2021}
+{{Grupo de Foz}. \emph{M{\'e}todos demogr{\'a}ficos: uma vis{\~a}o desde os pa{\'i}ses de l{\'i}ngua portuguesa}. 1. ed. S{\~a}o Paulo: Blucher, 2021. Dispon{\'\i}vel em: \url{https://openaccess.blucher.com.br/article-list/9786555500837-504/list}. Acesso em: 3 set. 2026.}
+
+\bibitem[Keyfitz 1971]{keyfitz1971}
+\abntrefinfo{Keyfitz}{KEYFITZ}{1971}
+{KEYFITZ, N. On the momentum of population growth.
+\emph{Demography}, Washington, DC, v.~8, n.~1, p. 71--80, 1971.}
+
+\bibitem[Leslie 1945]{leslie1945}
+\abntrefinfo{Leslie}{LESLIE}{1945}
+{LESLIE, P.~H. On the use of matrices in certain population mathematics.
+\emph{Biometrika}, Oxford, v.~33, n.~3, p. 183--212, 1945.}
+
+\bibitem[Preston, Heuveline e Guillot 2001]{preston2001}
+\abntrefinfo{Preston, Heuveline e Guillot}{PRESTON; HEUVELINE; GUILLOT}{2001}
+{PRESTON, S.~H.; HEUVELINE, P.; GUILLOT, M. \emph{Demography: measuring and modeling population processes}. Oxford: Blackwell Publishers, 2001.}
+
+\end{thebibliography}
